@@ -1,0 +1,36 @@
+.tabs {
+    position: sticky;
+    top: 60px;
+    background: #8446cf;
+    padding: 15px 0;
+    z-index: 100;
+    &__container {
+        display: flex;
+        gap: 15px;
+    }
+    &__tab {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        gap: 5px;
+        a {
+            font-size: 15px;
+            color: black;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &.active {
+                color: white;
+            }
+        }
+        .count {
+            font-size: 14px;
+            background: #1ABC9C;
+            color: white;
+            padding: 2px 4px;
+        }
+    }
+}

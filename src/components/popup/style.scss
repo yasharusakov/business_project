@@ -1,0 +1,80 @@
+.popup {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  transition: 0.3s ease;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.2s ease;
+  }
+  &__content {
+    background: white;
+    overflow: hidden;
+    border-radius: 10px;
+    width: clamp(300px, 90%, 600px);
+    height: clamp(300px, 90%, 600px);
+  }
+  &__control-panel {
+    background: white;
+    padding: 15px 30px;
+    color: black;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: #dbdbdb;
+    }
+    &__title {
+      font-size: 26px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-right: 10px;
+    }
+    &__close {
+      font-size: 19px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+  }
+  &__main {
+    background: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 60px);
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0,0,0,0.8);
+    .popup__container {
+      transform: scale(1);
+    }
+  }
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+    .popup__container {
+      transform: scale(0.7);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.support-popup {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  input, textarea {
+    background: #E5E7E9;
+    transition: 0.3s ease;
+    border: 1px solid #D0D3D5;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  input {
+    flex: 0 0 60px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  p {
+    color: red;
+    flex: 0 0 20px;
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  textarea {
+    flex: 1 1 100%;
+    resize: none;
+  }
+  button {
+    flex: 0 0 60px;
+    background: #72D4CA;
+    cursor: pointer;
+    border-radius: 12px;
+    color: white;
+  }
+}

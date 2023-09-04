@@ -1,0 +1,45 @@
+.support {
+  position: fixed;
+  background: #1d1d1d;
+  width: 60px;
+  height: 60px;
+  left: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid #1ABC9C;
+  z-index: 100;
+  @keyframes pulse {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+  }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    border: 3px solid #1ABC9C;
+    left: -30px;
+    opacity: 0;
+    right: -30px;
+    top: -30px;
+    bottom: -30px;
+    border-radius: 50%;
+    animation: pulse 1.5s linear infinite;
+  }
+
+  &:after {
+    animation-delay: .75s;
+  }
+}

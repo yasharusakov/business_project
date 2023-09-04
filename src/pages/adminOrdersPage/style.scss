@@ -1,0 +1,108 @@
+.admin-orders-page {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__order {
+    &__user {
+      width: 100%;
+      height: 100%;
+      &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        @media screen and (max-width: 500px){
+          flex-direction: column;
+        }
+      }
+      &__order-data {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        cursor: pointer;
+        color: white;
+        font-family: "Lato", sans-serif;
+      }
+      &__additional-order-data {
+        display: flex;
+        align-self: flex-end;
+        flex-direction: column;
+        gap: 15px;
+        &__timestamp {
+          color: #E5E7E9;
+        }
+        &__viewed {
+          > button, > div {
+            width: 100%;
+            text-align: center;
+            padding: 5px 10px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+          }
+
+          > button {
+            background: red;
+          }
+
+          > div {
+            background: #1ABC9C;
+          }
+        }
+        @media screen and (max-width: 500px){
+          align-self: inherit;
+        }
+      }
+      &__full-name {
+        display: flex;
+        gap: 5px;
+      }
+      &__address {
+        display: flex;
+        gap: 10px;
+      }
+      &__phone-number {
+        letter-spacing: 1.5px;
+      }
+      &__total-price {
+        word-spacing: 5px;
+        span {
+          color: #079BCF;
+        }
+      }
+    }
+    &__products {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &__product {
+        &__container {
+          padding: 5px;
+          display: flex;
+          gap: 15px;
+          border: 2px dashed #079BCF;
+        }
+        &__picture {
+          flex: 0 0 80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 80px;
+          height: 80px;
+          img {
+            width: auto;
+            max-height: 100%;
+          }
+        }
+        &__data {
+          font-size: 17px;
+          span {
+            font-weight: 600;
+            color: #1ABC9C;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+$container: 1690;
+
+@mixin adapProp($propetry, $minSize, $startSize) {
+  #{$propetry}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - 320px) / (#{$container} - 320)));
+}

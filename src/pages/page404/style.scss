@@ -1,0 +1,20 @@
+.page-404 {
+  width: 100%;
+  background: #8446cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__title {
+    color: white;
+    font-size: 150px;
+    font-family: "Russo One", sans-serif;
+  }
+  &__go-back {
+    background: #1d1d1d;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+}

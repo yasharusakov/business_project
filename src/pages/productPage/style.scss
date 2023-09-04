@@ -1,0 +1,138 @@
+@import "../../assets/styles/mixins";
+
+.product-page {
+    width: 100%;
+    .slides {
+        display: flex;
+        gap: 15px;
+        &__choose {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            &__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #E5E7E9;
+                cursor: pointer;
+                padding: 5px;
+                width: 50px;
+                height: 50px;
+                transition: all .3s ease;
+                &:hover, &.active {
+                    background: #079BCF;
+                }
+            }
+        }
+        @media screen and (max-width: 750px){
+            width: 100%;
+            .slides__choose {
+                display: none;
+            }
+        }
+        &.characteristics {
+            flex-direction: row-reverse;
+        }
+    }
+    .swiper {
+        background: #E5E7E9;
+        max-width: 350px;
+        max-height: 350px;
+        &-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: auto;
+                max-height: 350px;
+            }
+        }
+    }
+    &__row {
+        width: 100%;
+        margin: 15px 0;
+        display: flex;
+        gap: 15px;
+        @media screen and (max-width: 750px){
+            flex-wrap: wrap;
+        }
+    }
+    &__column {
+        &:not(&.characteristics) {
+            flex: 0 1 100%;
+            width: 100%;
+        }
+        &.characteristics {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 200px;
+        }
+        &:last-child {
+            display: flex;
+            gap: 25px;
+            @media screen and (max-width: 750px){
+                flex: 1;
+                flex-wrap: wrap;
+                justify-content: center;
+                .swiper {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    &__characteristics {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__characteristic {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &__title {
+            font-size: 14px;
+            font-family: 'Russo One', 'sans-serif';
+        }
+        &__text {
+            color: grey;
+            font-size: 14px;
+            font-family: 'Russo One', 'sans-serif';
+            word-wrap: anywhere;
+        }
+    }
+    &__additional-data {
+        flex: 1;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__product-title {
+        font-weight: 600;
+        font-family: "Open Sans", 'sans-serif';
+        @include adapProp('font-size', 16, 24)
+    }
+    &__product-price {
+        font-family: "Russo One", 'sans-serif';
+        @include adapProp('font-size', 24, 28)
+    }
+    &__product-button {
+        align-self: flex-start;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 10px 20px;
+        max-width: 100%;
+        font-size: 16px;
+        color: white;
+        white-space: nowrap;
+        font-weight: 600;
+        font-family: "Open Sans", sans-serif;
+        &.add-to-cart {
+            background: #079BCF;
+        }
+        &.has {
+            background: #1ABC9C;
+        }
+    }
+}

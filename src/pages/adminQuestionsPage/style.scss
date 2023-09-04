@@ -1,0 +1,46 @@
+.admin-questions-page {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__question {
+    font-family: "Lato", sans-serif;
+    &__container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    &__additional-data {
+      align-self: flex-end;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      &__viewed {
+        > button, > div {
+          width: 100%;
+          text-align: center;
+          padding: 5px 10px;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+
+        > button {
+          background: red;
+        }
+
+        > div {
+          background: #1ABC9C;
+        }
+      }
+    }
+    &__data {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}

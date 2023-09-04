@@ -1,0 +1,92 @@
+.admin-otherwise-page {
+  &__main-slider {
+    background: #E5E7E9;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 2px dashed #1ABC9C;
+    padding: 15px;
+    &__title {
+      font-size: 20px;
+    }
+    .swiper {
+      width: 100%;
+      &-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 400px;
+        img {
+          width: auto;
+          max-height: 400px;
+        }
+      }
+    }
+    &__slides {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      &__slide {
+        position: relative;
+        cursor: pointer;
+        background: #079BCF;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        img {
+          width: auto;
+          max-height: 100%;
+        }
+        &:hover &__delete {
+          opacity: 1;
+        }
+        &__delete {
+          opacity: 0;
+          background: #1d1d1d;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all .3s ease;
+        }
+      }
+    }
+    &__buttons {
+      display: flex;
+      gap: 15px;
+    }
+    &__add-image, &__submit {
+      height: 50px;
+      background: #1ABC9C;
+      padding: 10px 15px;
+      border-radius: 8px;
+      position: relative;
+      color: white;
+      input {
+        cursor: pointer;
+        font-size: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+    &__submit {
+      background: #079BCF;
+      > div {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

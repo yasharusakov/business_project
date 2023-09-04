@@ -1,0 +1,14 @@
+.admin-products-page {
+    &__create-product {
+        background: #079BCF;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+        }
+    }
+}

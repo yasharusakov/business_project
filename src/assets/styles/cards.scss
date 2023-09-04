@@ -1,0 +1,114 @@
+.cards {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    @media screen and (max-width: 500px) {
+      grid-template-columns: repeat(auto-fit, 100%);
+    }
+  }
+
+  &__card {
+    min-height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #bebaba;
+    transition: .1s ease-out;
+    &:hover {
+      box-shadow: 0 0 10px 1px #4b4a4a;
+    }
+
+    &:focus {
+      box-shadow: 0 0 2px 3px #0FF;
+    }
+
+    &__container {
+      gap: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    &__picture {
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      img {
+        width: auto;
+        max-height: 100%;
+        filter: drop-shadow(0 0 2px white);
+      }
+
+      @media screen and (max-width: 500px) {
+        max-height: 100%;
+      }
+    }
+
+    &__text {
+      min-width: 0;
+      flex: 1 1 auto;
+      background: #1d1d1d;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "Roboto", sans-serif;
+      gap: 15px;
+      text-align: center;
+
+      &.admin {
+        min-width: 0;
+        flex-direction: row;
+      }
+
+      &__icons {
+        display: flex;
+        gap: 10px;
+        > a, div {
+          background: white;
+          padding: 5px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          img {
+            max-width: 24px;
+            max-height: 24px;
+          }
+        }
+      }
+
+      &__title {
+        &.category {
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        &.product {
+          width: 100%;
+          text-align: left;
+          font-weight: 400;
+          color: white;
+        }
+      }
+
+      &__price {
+        width: 100%;
+        text-align: right;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+    }
+  }
+}
